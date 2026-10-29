@@ -1,0 +1,799 @@
+/* =========================================
+   CHESS CLUB - LUXURY AUTH UI
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background: #050607;
+  color: white;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(212, 158, 55, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(212, 158, 55, 0.08),
+      transparent 35%
+    ),
+    #050607;
+}
+
+
+/* =========================================
+   LEFT CHESS SHOWCASE
+========================================= */
+
+.chess-showcase {
+  width: 46%;
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(3, 5, 6, 0.55),
+      rgba(3, 5, 6, 0.92)
+    ),
+    radial-gradient(
+      circle at center bottom,
+      #5d4219,
+      #080a0c 65%
+    );
+
+  border-right: 1px solid rgba(212, 158, 55, 0.35);
+}
+
+
+/* chessboard effect */
+
+.chess-showcase::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 500px;
+
+  bottom: -200px;
+  left: -100px;
+
+  transform: rotate(-8deg);
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.08) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.08) 75%
+    );
+
+  background-size: 90px 90px;
+  background-position: 0 0, 45px 45px;
+
+  opacity: 0.35;
+}
+
+
+/* golden glow */
+
+.chess-showcase::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 20%;
+  bottom: -300px;
+
+  background: #dca93f;
+
+  filter: blur(180px);
+
+  opacity: 0.15;
+}
+
+
+/* =========================================
+   SHOWCASE CONTENT
+========================================= */
+
+.showcase-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  width: 80%;
+}
+
+
+/* knight */
+
+.chess-knight {
+  font-size: 80px;
+
+  color: #e6b84c;
+
+  text-shadow:
+    0 0 15px rgba(230, 184, 76, 0.5),
+    0 0 40px rgba(230, 184, 76, 0.25);
+
+  margin-bottom: 10px;
+}
+
+
+/* title */
+
+.showcase-content h1 {
+  font-size: 48px;
+
+  letter-spacing: 3px;
+
+  color: #f5e4bc;
+
+  margin-bottom: 12px;
+}
+
+
+/* tagline */
+
+.tagline {
+  font-family: Arial, sans-serif;
+
+  color: #e8b94f;
+
+  font-size: 17px;
+
+  letter-spacing: 1px;
+}
+
+
+/* gold line */
+
+.gold-line {
+  width: 55px;
+  height: 3px;
+
+  background: #e3af3d;
+
+  margin: 35px auto;
+}
+
+
+/* message */
+
+.showcase-message {
+  margin-top: 20px;
+}
+
+.showcase-message span {
+  color: #e6b84c;
+  font-size: 25px;
+}
+
+.showcase-message p {
+  margin-top: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  color: #f3f3f3;
+}
+
+
+/* giant chess piece */
+
+.big-chess-piece {
+  font-size: 250px;
+
+  line-height: 1;
+
+  color: #d7a53c;
+
+  margin-top: 25px;
+
+  text-shadow:
+    0 10px 25px #000,
+    0 0 30px rgba(218, 169, 61, 0.3);
+}
+
+
+/* champions */
+
+.champions {
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #e8e8e8;
+
+  margin-top: 10px;
+}
+
+.champions:first-line {
+  color: #e6b84c;
+  font-size: 22px;
+}
+
+
+/* =========================================
+   RIGHT FORM SECTION
+========================================= */
+
+.form-section {
+  width: 54%;
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 35px;
+}
+
+
+/* =========================================
+   AUTH CARD
+========================================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 510px;
+
+  padding: 42px 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(18, 21, 23, 0.98),
+      rgba(7, 9, 10, 0.98)
+    );
+
+  border: 1px solid rgba(224, 171, 61, 0.75);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(218, 169, 61, 0.025);
+
+  position: relative;
+}
+
+
+/* gold corner glow */
+
+.auth-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 30px;
+  right: 30px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e4b34c,
+    transparent
+  );
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-circle {
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 55px;
+
+  color: #e8b94f;
+
+  border: 1px solid #e2ad3c;
+
+  background:
+    radial-gradient(
+      circle,
+      #182025,
+      #07090a
+    );
+
+  box-shadow:
+    0 0 30px rgba(224, 171, 61, 0.12);
+}
+
+
+/* heading */
+
+.auth-card h2 {
+  text-align: center;
+
+  font-size: 38px;
+
+  color: #f5f5f5;
+
+  margin-bottom: 8px;
+}
+
+
+/* subtitle */
+
+.subtitle {
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  color: #aeb2b5;
+
+  font-size: 15px;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  color: #f1f1f1;
+
+  font-size: 14px;
+
+  margin-bottom: 9px;
+}
+
+
+.input-wrapper {
+  height: 59px;
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid #54585b;
+
+  border-radius: 10px;
+
+  background: rgba(10, 12, 13, 0.8);
+
+  transition: 0.3s;
+}
+
+
+.input-wrapper:focus-within {
+  border-color: #e0ad3d;
+
+  box-shadow:
+    0 0 0 3px rgba(224, 173, 61, 0.08);
+}
+
+
+.input-icon {
+  width: 50px;
+
+  text-align: center;
+
+  font-size: 20px;
+
+  color: #e1ae40;
+}
+
+
+.input-wrapper input {
+  flex: 1;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-family: Arial, sans-serif;
+}
+
+
+.input-wrapper input::placeholder {
+  color: #777d82;
+}
+
+
+/* password eye */
+
+.password-toggle {
+  border: none;
+
+  background: transparent;
+
+  color: #dcae45;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  padding: 12px;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 5px 0 20px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+
+.remember {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #d5d5d5;
+}
+
+
+.remember input {
+  accent-color: #dcae42;
+
+  width: 16px;
+  height: 16px;
+}
+
+
+.forgot {
+  border: none;
+
+  background: transparent;
+
+  color: #e4b044;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ERROR / SUCCESS MESSAGE
+========================================= */
+
+.message {
+  padding: 12px 14px;
+
+  margin-bottom: 18px;
+
+  border-radius: 8px;
+
+  background: rgba(220, 170, 60, 0.08);
+
+  border: 1px solid rgba(220, 170, 60, 0.35);
+
+  color: #e8bb58;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   GOLD BUTTON
+========================================= */
+
+.gold-button {
+  width: 100%;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  font-family: Georgia, serif;
+
+  color: #080909;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0ca72,
+      #d79c2d
+    );
+
+  box-shadow:
+    0 8px 25px rgba(218, 163, 48, 0.18);
+
+  transition: 0.3s;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+.gold-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(218, 163, 48, 0.3);
+}
+
+
+.gold-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 28px 0 20px;
+}
+
+
+.divider span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #363a3d;
+}
+
+
+.divider p {
+  color: #a7abad;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ACCOUNT TEXT
+========================================= */
+
+.account-text {
+  text-align: center;
+
+  color: #aeb1b3;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   OUTLINE BUTTON
+========================================= */
+
+.outline-button {
+  width: 100%;
+
+  height: 57px;
+
+  background: transparent;
+
+  border: 1px solid #dba638;
+
+  border-radius: 9px;
+
+  color: #e4b34c;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+
+.outline-button:hover {
+  background: rgba(220, 168, 55, 0.08);
+
+  box-shadow:
+    0 0 20px rgba(220, 168, 55, 0.1);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  margin-top: 25px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  color: #777b7e;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .auth-page {
+    flex-direction: column;
+  }
+
+  .chess-showcase {
+    width: 100%;
+
+    min-height: 360px;
+
+    border-right: none;
+
+    border-bottom: 1px solid
+      rgba(212, 158, 55, 0.35);
+  }
+
+  .form-section {
+    width: 100%;
+
+    padding: 30px 20px;
+  }
+
+  .big-chess-piece {
+    display: none;
+  }
+
+  .showcase-content h1 {
+    font-size: 38px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .auth-card h2 {
+    font-size: 30px;
+  }
+
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+
+    font-size: 42px;
+  }
+
+  .login-options {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+}

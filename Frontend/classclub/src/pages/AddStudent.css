@@ -1,0 +1,162 @@
+.add-student-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #211b10 0%,
+      #0b0a08 45%,
+      #050504 100%
+    );
+
+  padding: 40px 20px;
+
+  color: #f5f0e6;
+}
+
+.add-student-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 45px;
+
+  background: rgba(20, 18, 14, 0.95);
+
+  border: 1px solid rgba(212, 175, 98, 0.35);
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.6);
+
+  border-radius: 4px;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+
+  color: #aaa196;
+
+  cursor: pointer;
+
+  margin-bottom: 30px;
+
+  font-size: 14px;
+}
+
+.back-button:hover {
+  color: #d4af62;
+}
+
+.chess-icon {
+  text-align: center;
+
+  color: #d4af62;
+
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.add-student-card h1 {
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: 34px;
+
+  font-weight: normal;
+
+  margin: 0;
+}
+
+.subtitle {
+  text-align: center;
+
+  color: #8f887e;
+
+  margin-bottom: 35px;
+}
+
+.add-student-card label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #cfc7ba;
+
+  font-size: 14px;
+}
+
+.add-student-card input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  margin-bottom: 22px;
+
+  background: #0b0a08;
+
+  border: 1px solid #39342d;
+
+  color: #f5f0e6;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.add-student-card input:focus {
+  border-color: #d4af62;
+}
+
+.add-student-card input::placeholder {
+  color: #625d55;
+}
+
+.add-student-button {
+  width: 100%;
+
+  padding: 16px;
+
+  margin-top: 5px;
+
+  background: #d4af62;
+
+  color: #0b0a08;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.add-student-button:hover {
+  background: #eed18a;
+}
+
+.success-message {
+  text-align: center;
+
+  margin-top: 22px;
+
+  color: #d4af62;
+}
+
+.error-message {
+  text-align: center;
+
+  margin-top: 22px;
+
+  color: #e07070;
+}

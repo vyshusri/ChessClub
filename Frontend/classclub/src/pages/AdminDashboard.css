@@ -1,0 +1,515 @@
+.free-bookings-table td:nth-child(3) {
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.admin-dashboard {
+  min-height: 100vh;
+  display: flex;
+  background: #090807;
+  color: #f5f0e6;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #11100d;
+  border-right: 1px solid #302b24;
+  padding: 25px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d4af62;
+  font-size: 24px;
+  font-family: Georgia, serif;
+  margin-bottom: 45px;
+}
+
+.logo span {
+  font-size: 20px;
+}
+
+.admin-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777066;
+  margin-bottom: 15px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar nav button {
+  background: transparent;
+  border: none;
+  color: #a9a198;
+  text-align: left;
+  padding: 13px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.sidebar nav button:hover,
+.sidebar nav button.active {
+  background: #211d17;
+  color: #d4af62;
+}
+
+.logout-button {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid #3a342b;
+  color: #a9a198;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  border-color: #d4af62;
+  color: #d4af62;
+}
+
+
+/* MAIN */
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 1400px;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.small-title {
+  color: #8b8277;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cfc6b9;
+}
+
+
+/* STATISTICS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.stat-card {
+  background: #12110e;
+  border: 1px solid #302b24;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #211d17;
+  color: #d4af62;
+  font-size: 23px;
+}
+
+.stat-card p {
+  margin: 0 0 8px;
+  color: #888078;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+
+/* MANAGEMENT */
+
+.management h2 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.description {
+  color: #777066;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.management-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.management-card {
+  background: #12110e;
+  border: 1px solid #302b24;
+  padding: 28px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.management-card:hover {
+  border-color: #d4af62;
+  transform: translateY(-2px);
+}
+
+.management-icon {
+  color: #d4af62;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.management-card h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+
+.management-card p {
+  color: #81796f;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.management-card span {
+  color: #d4af62;
+  font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 190px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-content {
+    padding: 25px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .management-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   FREE CLASS BOOKINGS
+   ========================================= */
+
+.free-bookings-section {
+  margin-top: 40px;
+  padding: 30px;
+  background: #171717;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.free-bookings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.free-bookings-header h2 {
+  margin: 8px 0;
+  color: #f5f0e6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.free-bookings-header .description {
+  margin: 0;
+  color: #9e9e9e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.refresh-bookings-button {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  background: transparent;
+  color: #d4af37;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.refresh-bookings-button:hover {
+  background: #d4af37;
+  color: #111;
+}
+
+.free-bookings-message {
+  padding: 30px;
+  text-align: center;
+  color: #aaa;
+  border: 1px dashed rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
+
+/* TABLE */
+
+.free-bookings-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.free-bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1050px;
+}
+
+.free-bookings-table th {
+  background: #202020;
+  color: #d4af37;
+  text-align: left;
+  padding: 15px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.free-bookings-table td {
+  padding: 16px 15px;
+  color: #d6d6d6;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: middle;
+}
+
+.free-bookings-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.free-bookings-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.035);
+}
+
+.free-bookings-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.free-bookings-table td strong {
+  color: #f1eadc;
+  font-weight: 500;
+}
+
+/* STATUS */
+
+.booking-status {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.booking-status.pending {
+  color: #e0b84f;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.booking-status.confirmed {
+  color: #8fd19e;
+  background: rgba(80, 160, 95, 0.1);
+  border: 1px solid rgba(80, 160, 95, 0.2);
+}
+
+/* MEETING LINK */
+
+.meeting-link {
+  color: #d4af37;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.meeting-link:hover {
+  text-decoration: underline;
+}
+
+.no-link {
+  color: #777;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.confirmed-label {
+  color: #8fd19e;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* BOOKING ACTION */
+
+.booking-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.meeting-link-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  background: #111;
+  color: #eee;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 7px;
+  outline: none;
+  font-size: 12px;
+}
+
+.meeting-link-input::placeholder {
+  color: #666;
+}
+
+.meeting-link-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.08);
+}
+
+.confirm-booking-button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 7px;
+  background: #d4af37;
+  color: #111;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.confirm-booking-button:hover {
+  background: #e5c158;
+  transform: translateY(-1px);
+}
+
+.confirm-booking-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .free-bookings-section {
+    padding: 22px;
+  }
+
+  .free-bookings-header {
+    flex-direction: column;
+  }
+
+  .refresh-bookings-button {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .free-bookings-section {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .free-bookings-header h2 {
+    font-size: 22px;
+  }
+
+  .free-bookings-table {
+    min-width: 950px;
+  }
+}
